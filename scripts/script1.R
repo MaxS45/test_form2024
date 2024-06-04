@@ -1,0 +1,1 @@
+variable_globale<-2024
