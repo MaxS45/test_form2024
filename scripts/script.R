@@ -1,5 +1,6 @@
 rm(list = ls())
 setwd("/home/onyxia/formation-bonnes-pratiques-R")
+setwd("/home/onyxia")
 
 if (!require('ggplot2')) install.packages('ggplot2')
 if (!require('stringr')) install.packages('stringr')
@@ -23,6 +24,7 @@ decennie_a_partir_annee    = function(ANNEE){ return(ANNEE - ANNEE %%
                                                        10) }
 
 ggplot(df) + geom_histogram(aes(x = 5*floor(as.numeric(aged)/5)), stat = "count")
+ggsave(filename = "/home/onyxia/work/test_form2024/test_graph.png")
 
 # correction (qu'il faudra retirer)
 # ggplot(
